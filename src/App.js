@@ -2,7 +2,7 @@ import 'moment/locale/es-mx';
 import locale from 'antd/es/date-picker/locale/es_ES';
 import { DatePicker, Space } from 'antd';
 import { Collapse } from 'antd';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 
 import './App.scss';
@@ -24,6 +24,12 @@ function App() {
     <Router>
       <div className="App">
         <h1>Sistema de Rutas Básico</h1>
+
+        <nav>
+          <Link to="/">Home | </Link>
+          <Link to="/contact">Contactos | </Link>
+          <Link to="/elementos">Elementos</Link>
+        </nav>
 
         <Routes>
           <Route exact path='/' element={<Home />} />
