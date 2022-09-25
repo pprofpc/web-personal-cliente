@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
 import "./LayoutAdmin.scss";
+import MenuTop from "../components/Admin/MenuTop/MenuTop";
 
 export default function LayoutAdmin(props) {
     const { children } = props;
@@ -11,7 +12,7 @@ export default function LayoutAdmin(props) {
             {/* TO DO: Menu Sider */}
             <Layout className="layout-admin">
                 <Header className="layout-admin__header">
-                    {/* TO DO: Menu Top */}
+                    <MenuTop />
                 </Header>
                 <Content className="layout-admin__content">{children}</Content>
                 <Footer className="layout-admin__footer">Footer: pprofpc</Footer>
