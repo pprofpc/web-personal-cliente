@@ -12,6 +12,7 @@ import AdminSingIn from '../pages/Admin/SignIn';
 
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
+import Elements from '../pages/Elements';
 
 // Other
 
@@ -47,6 +48,11 @@ const routesUser = [
         path: "/contact",
         layout: LayoutBasic,
         element: Contact,
+    },
+    {
+        path: "/elements",
+        layout: LayoutBasic,
+        element: Elements,
     }
 ];
 const routes = [...routesAdmin, ...routesUser];
