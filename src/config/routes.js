@@ -13,6 +13,10 @@ import AdminSingIn from '../pages/Admin/SignIn';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 
+// Other
+
+import Error404 from '../pages/Error404';
+
 //
 
 const routesAdmin = [
@@ -25,7 +29,7 @@ const routesAdmin = [
         path: "/admin/login",
         layout: LayoutAdmin,
         element: AdminSingIn,
-    }
+    },
 ];
 
 const routesUser = [
@@ -35,11 +39,17 @@ const routesUser = [
         element: Home,
     },
     {
+        path: "*",
+        layout: LayoutBasic,
+        element: Error404,  
+    },
+    {
         path: "/contact",
         layout: LayoutBasic,
         element: Contact,
     }
 ];
 const routes = [...routesAdmin, ...routesUser];
+
 
 export default routes;
