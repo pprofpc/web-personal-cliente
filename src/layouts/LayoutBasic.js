@@ -1,12 +1,17 @@
 import React from "react";
 import { Layout } from "antd";
 
-export default function LayoutBasic() {
+export default function LayoutBasic(props) {
+    const { children } = props;
+    const { Content, Footer} = Layout;
+
     return (
         <Layout>
             <h2> Menu Sider</h2>
-            <div> Contenido....</div>
-            <h3>Footer...</h3>
+            <Layout>
+                <Content> {children} </Content>
+                <Footer>Footer...</Footer>
+            </Layout>
         
         </Layout>
     );
