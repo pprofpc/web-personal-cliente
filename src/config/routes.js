@@ -31,6 +31,11 @@ const routesAdmin = [
         layout: LayoutAdmin,
         element: AdminSingIn,
     },
+    {
+        path: "*",
+        layout: LayoutAdmin,
+        element: Error404,  
+    },
 ];
 
 const routesUser = [
